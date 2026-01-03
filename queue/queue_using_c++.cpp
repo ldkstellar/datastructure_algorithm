@@ -14,7 +14,12 @@ private:
   int *p;
 };
 
-Queue::Queue(int size) { p = new int[size]; }
+Queue::Queue(int size) { p = new int[size];
+for (size_t i = 0; i < size; i++)
+{
+  p[i] =-1;
+}
+ }
 
 void Queue::enqueue(int x) {
   if (rear == size - 1) {
